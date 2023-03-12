@@ -16,6 +16,7 @@
 
 .todo-list-content {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
 }
 
