@@ -1,30 +1,24 @@
-import React from "react";
-import "./styles.css";
+import { FaTrash } from "react-icons/fa";
+import { BsFillCheckSquareFill } from "react-icons/bs";
 
 const TodoListItem = ({ id, onCheck, checked, onDelete, label }) => {
   return (
     <div className="todo-list-item">
       <div
-        tabIndex="0"
-        role="checkbox"
-        aria-checked
-        className="todo-list-item-content"
+        className="todo-list-item-check"
+        onClick={() => onCheck(id, checked)}
       >
-        <input
-          tabIndex="-1"
-          type="checkbox"
-          checked={checked}
-          onChange={() => onCheck(id, checked)}
-        />
-        <span className={checked ? "todo-list-item-checked" : ""}>{label}</span>
+        {checked && <BsFillCheckSquareFill />}
       </div>
-      <button
-        type="button"
-        className="todo-list-item-delete"
-        onClick={() => onDelete(id)}
-      >
-        x
-      </button>
+      <div className="todo-list-item-content">
+        <div className={checked ? "todo-list-item-checked label" : "label"}>
+          {label}
+        </div>
+
+        <div className="todo-list-item-delete" onClick={() => onDelete(id)}>
+          <FaTrash />
+        </div>
+      </div>
     </div>
   );
 };

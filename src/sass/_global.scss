@@ -1,0 +1,23 @@
+body {
+  /* margin: 20px 0 0 0; */
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  background-image: $background-pattern;
+}
+
+.root {
+  border-radius: 0.125rem;
+  padding: 1.5625rem 0.625rem;
+  width: 90%;
+
+  margin: 3.125rem auto;
+  background-color: $background-content;
+  font-family: "Nunito", sans-serif;
+
+  @include breakpoint-up(medium) {
+    width: 600px;
+  }
+}

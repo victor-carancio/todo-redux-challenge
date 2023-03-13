@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./styles.css";
 import { useDispatch } from "react-redux";
 import { createTodo } from "../../features/tasks/todosSlice";
 import { loadingToErrorToast } from "components/Toast";

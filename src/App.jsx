@@ -2,7 +2,7 @@ import React from "react";
 import TodoList from "./components/TodoList";
 import TodoResults from "./components/TodoResults";
 import TodoForm from "./components/TodoForm";
-import "./App.css";
+import "./css/index.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTodosList, totalDone } from "features/tasks/todosSlice";
@@ -22,11 +22,11 @@ const App = () => {
   }, [todosList]);
 
   return (
-    <div className="root">
+    <main className="root">
       <TodoList />
       <TodoResults />
       <TodoForm />
-    </div>
+    </main>
   );
 };
 

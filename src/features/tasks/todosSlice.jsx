@@ -79,6 +79,7 @@ const todoSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      //Get To do's
       .addCase(getTodosList.pending, (state) => {
         loadingToast("Loading To Do list...");
       })
@@ -89,6 +90,7 @@ const todoSlice = createSlice({
       .addCase(getTodosList.rejected, (state) => {
         loadingToErrorToast("Loading To Do list has failed");
       })
+      //Post To do
       .addCase(createTodo.pending, (state) => {
         loadingToast("Adding To Do...");
       })
@@ -99,7 +101,7 @@ const todoSlice = createSlice({
       .addCase(createTodo.rejected, (state) => {
         loadingToErrorToast("Add To do has failed");
       })
-      //Update
+      //Update To do
       .addCase(updateTodo.pending, (state) => {
         loadingToast("Updating To Do...");
       })
@@ -114,6 +116,7 @@ const todoSlice = createSlice({
       .addCase(updateTodo.rejected, (state) => {
         loadingToErrorToast("Update To do has failed");
       })
+      //Delete To do
       .addCase(deleteTodo.pending, (state) => {
         loadingToast("Removing To do...");
       })
